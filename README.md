@@ -1,3 +1,5 @@
+Tomás Gueiros Souza Manzi, BCC 2018-2
+
 # Lista de Exercícios 2 - 2018-2
 
 ===>>> Entrega: Até às 23h59 da Quarta-Feira, 17 de Outubro <<<===
