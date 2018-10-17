@@ -28,7 +28,60 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 1")
+    sequencia = str(input("digite uma sequencia de senhas separadas por virgula: "))
+    tamseq = len(sequencia) # inicia uma variavel tamseq que vai guardar o tamanho de caracteres da sequencia
+    n = int(0) # inicia uma variavel n para utilizar no while como contador
+    n1 = int(0) # inicia uma variavel n1 para utilizar no segundo while como contador 
+    insenha = int(0) # inicia uma variavel que vai guardar a posicao inicial da ultima senha na sequencia
+    primeiravirgula = bool(False) # variavel para garantir que nao seja impressa uma virgula apos a primeira senha caso ela seja a unica senha que sera retornada
+    contemaz = bool(False) 
+    contem09 = bool(False)
+    contemAZ = bool(False)
+    contemespecial = bool(False)
+    while (n < tamseq):
+        if sequencia[n] == ",":
+            if len(sequencia[insenha:n]) >= 6 and len(sequencia[insenha:n]) <= 12:
+                n1 = insenha
+                while (n1 < n):
+                    if (sequencia[n1].isalpha() == True) and (sequencia[n1].islower() == True):
+                        contemaz = True
+                    if (sequencia[n1].isalpha() == True) and (sequencia[n1].isupper() == True):
+                        contemAZ = True
+                    if (sequencia[n1].isdigit() == True):
+                        contem09 = True
+                    if (sequencia[n1] == "@") or (sequencia[n1] == "#") or (sequencia[n1] == "$"):
+                        contemespecial = True
+                    n1 = n1 + 1
+                if (contemaz == True) and (contem09 == True) and (contemAZ == True) and (contemespecial == True):
+                    if primeiravirgula == False:
+                        primeiravirgula = True
+                        print(sequencia[insenha:n], end="") 
+                    else:
+                        print(", " + (sequencia[insenha:n]), end="")   
+                insenha = n+2 # o inicio da proxima senha eh duas casas depois da virgula (que no momento eh 'n')
+        contemaz = False
+        contem09 = False
+        contemAZ = False
+        contemespecial = False        
+        n = n + 1
+        if n == tamseq: 
+            if len(sequencia[insenha:n]) >= 6 and len(sequencia[insenha:n]) <= 12:
+                n1 = insenha
+                while (n1 < n):
+                    if (sequencia[n1].isalpha() == True) and (sequencia[n1].islower() == True):
+                        contemaz = True
+                    if (sequencia[n1].isalpha() == True) and (sequencia[n1].isupper() == True):
+                        contemAZ = True
+                    if (sequencia[n1].isdigit() == True):
+                        contem09 = True
+                    if (sequencia[n1] == "@") or (sequencia[n1] == "#") or (sequencia[n1] == "$"):
+                        contemespecial = True
+                    n1 = n1 + 1
+                if (contemaz == True) and (contem09 == True) and (contemAZ == True) and (contemespecial == True):
+                    if primeiravirgula == False:
+                        print(sequencia[insenha:n]) 
+                    else:
+                        print(", " + (sequencia[insenha:n]))  
     
 
 
