@@ -19,7 +19,195 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 4")
+    anobissexto = bool(False)
+    ano = int(input("digite o ano da data desejada: "))
+    mes = int(input("digite o mes da data desejada: "))
+    dia = int(input("digite o mes da data desejada: "))
+    if (ano % 4) == 0:
+        if (ano % 100) == 0:
+            if (ano % 400) == 0:
+                anobissexto = True
+            else:
+                anobissexto = False
+        else:
+            anobissexto = True
+    else:
+        anobissexto = False
+
+    if anobissexto == False:
+        if mes == 1:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 2:
+            if (dia == 28):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 3:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 4:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 5:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 6:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 7:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 8:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 9:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 10:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 11:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 12:
+            if (dia == 31):   
+                dia = 1
+                mes = 1
+                ano = ano+1
+            
+            else:
+                dia = dia+1
+    elif anobissexto == True:
+        if mes == 1:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 2:
+            if (dia == 29):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 3:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 4:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 5:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 6:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 7:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 8:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 9:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 10:
+            if (dia == 31):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 11:
+            if (dia == 30):   
+                dia = 1
+                mes = mes+1
+            
+            else:
+                dia = dia+1
+        elif mes == 12:
+            if (dia == 31):   
+                dia = 1
+                mes = 1
+                ano = ano+1
+            
+            else:
+                dia = dia+1
+                
+    print(str(ano) + "-" + str(mes) + "-" + str(dia))
 
 
     
